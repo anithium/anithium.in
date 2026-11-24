@@ -21,12 +21,12 @@ export const metadata: Metadata = {
     template: "%s | ANITHIUM",
   },
   description:
-    "ANITHIUM is an independent technology and innovation company building digital experiences, intelligent systems, and ventures.",
+    "ANITHIUM is an independent technology and innovation company shaped by curiosity, independent thinking, and the possibilities of technology.",
   applicationName: "ANITHIUM",
   openGraph: {
     title: "ANITHIUM — Technology & Innovation",
     description:
-      "We turn ambitious ideas into meaningful digital experiences, intelligent systems, and ventures built for the future.",
+      "An independent technology and innovation company driven by curiosity, guided by intent, and focused on what could be possible next.",
     url: "https://anithium.in",
     siteName: "ANITHIUM",
     type: "website",
