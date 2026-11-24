@@ -41,6 +41,20 @@ section[id] { scroll-margin-top: 24px; }
     radial-gradient(ellipse at 12% 56%, rgba(69, 53, 112, .11), transparent 38%),
     linear-gradient(180deg, rgba(7,9,16,.08), rgba(7,9,16,.22));
 }
+.site-shell::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: -12% -18%;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 68% 16%, rgba(85,112,178,.17), transparent 30%),
+    radial-gradient(ellipse at 24% 38%, rgba(85,65,145,.14), transparent 32%),
+    radial-gradient(ellipse at 76% 66%, rgba(55,91,145,.12), transparent 34%),
+    radial-gradient(ellipse at 42% 88%, rgba(92,67,142,.10), transparent 32%);
+  filter: blur(34px);
+  animation: galaxy-drift 34s ease-in-out infinite alternate;
+}
 .site-shell > header, .site-shell > section, .site-shell > footer {
   position: relative;
   z-index: 1;
@@ -223,7 +237,7 @@ section[id] { scroll-margin-top: 24px; }
 .hero-copy h1 { text-wrap: balance; }
 .hero-copy .eyebrow { text-shadow: 0 0 24px rgba(160,185,235,.16); }
 
-@keyframes emblem-float { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-12px) rotate(2deg); } }
+@keyframes galaxy-drift { from { transform: translate3d(-1.5%, -1%, 0) scale(1); } to { transform: translate3d(1.5%, 2%, 0) scale(1.08); } }\n@keyframes emblem-float { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-12px) rotate(2deg); } }
 @keyframes aura-breathe { 0%,100% { opacity: .65; transform: scale(.94); } 50% { opacity: 1; transform: scale(1.08); } }
 @keyframes orbit-turn { from { rotate: 0deg; } to { rotate: 360deg; } }
 @keyframes orbit-turn-reverse { from { rotate: 360deg; } to { rotate: 0deg; } }
@@ -240,5 +254,5 @@ section[id] { scroll-margin-top: 24px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-  .motion-ready [data-reveal] { opacity: 1; transform: none; }
+  .motion-ready [data-reveal] { opacity: 1; transform: none; }\n  .site-shell::before { animation: none; }
 }
