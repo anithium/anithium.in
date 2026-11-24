@@ -14,7 +14,7 @@ export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="mobile-menu relative md:hidden" onKeyDown={(event) => {
+    <div className="mobile-menu relative block min-[681px]:hidden" onKeyDown={(event) => {
       if (event.key === "Escape") setIsOpen(false);
     }}>
       <button
