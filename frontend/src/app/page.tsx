@@ -2,7 +2,6 @@ import Image from "next/image";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import MobileNav from "@/components/layout/mobile-nav";
 import ScrollEffects from "@/components/motion/scroll-effects";
-import AmbientWorld from "@/components/motion/ambient-world";
 
 const principles = [
   { number: "01", title: "Think independently", text: "Question assumptions. Look beyond the obvious. Make room for ideas that challenge convention." },
@@ -15,7 +14,6 @@ export default function Home() {
     <>
       <a href="#main-content" className="skip-link">Skip to content</a>
       <main id="main-content" className="site-shell">
-      <AmbientWorld />
       <ScrollEffects />
       <header className="container relative z-30 flex h-16 items-center justify-between border-b border-white/10 sm:h-20 site-header">
         <a href="#" aria-label="ANITHIUM home" className="flex min-w-0 items-center gap-2.5 sm:gap-3">
@@ -34,10 +32,9 @@ export default function Home() {
         <MobileNav />
       </header>
 
-      <section className="hero-section relative flex min-h-[760px] items-center overflow-hidden border-b border-white/10 py-16 sm:min-h-[860px] lg:min-h-[calc(100svh-80px)] lg:py-20">
-        <div className="hero-atmosphere pointer-events-none absolute inset-0" />
-        <div className="hero-aurora pointer-events-none absolute inset-0" />
-        <div className="hero-light pointer-events-none absolute inset-0" />
+      <section className="hero-section relative flex min-h-[690px] items-center overflow-hidden border-b border-white/10 py-16 sm:min-h-[760px] lg:min-h-[calc(100svh-80px)] lg:py-20">
+        <div className="grid-lines pointer-events-none absolute inset-0" />
+        <div className="hero-glow pointer-events-none absolute inset-0" />
         <div className="hero-grain pointer-events-none absolute inset-0" />
         <div className="container relative z-10 grid items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
           <div className="hero-copy" data-reveal="up">
@@ -58,11 +55,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-emblem mx-auto flex aspect-square w-full max-w-[min(88vw,560px)] items-center justify-center" role="img" aria-label="ANITHIUM angular symbol surrounded by subtle orbital rings" data-reveal="scale">
+          <div className="hero-emblem mx-auto flex aspect-square w-full max-w-[min(82vw,470px)] items-center justify-center" role="img" aria-label="ANITHIUM angular symbol surrounded by subtle orbital rings" data-reveal="scale">
             <div className="emblem-aura" />
-            <div className="emblem-halo emblem-halo-one" />
-            <div className="emblem-halo emblem-halo-two" />
-            <div className="emblem-rune">A / 01</div>
             <div className="emblem-orbit emblem-orbit-one"><span /></div>
             <div className="emblem-orbit emblem-orbit-two"><span /></div>
             <div className="emblem-orbit emblem-orbit-three" />
@@ -70,7 +64,6 @@ export default function Home() {
               <Image src="/images/anithium-symbol-white.svg" alt="ANITHIUM angular A symbol" width={330} height={330} priority className="h-[62%] w-[62%] object-contain" />
             </div>
             <span className="emblem-caption">INDEPENDENT BY DESIGN</span>
-            <span className="emblem-coordinate">27° / 00° / ∞</span>
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 items-center gap-3 text-[9px] uppercase tracking-[.24em] text-white/35 md:flex">
