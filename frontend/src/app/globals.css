@@ -37,34 +37,13 @@ section[id] { scroll-margin-top: 24px; }
 @media (min-width: 640px) { .container { width: min(1200px, calc(100% - 64px)); } }
 @media (min-width: 1024px) { .container { width: min(1200px, calc(100% - 80px)); } }
 .eyebrow { color: var(--silver); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; }
-.display-font { font-family: var(--font-manrope), Arial, sans-serif; font-weight: 650; letter-spacing: -.065em; }
-.hero-atmosphere {
-  background:
-    radial-gradient(ellipse at 76% 48%, rgba(179, 188, 201, .105) 0%, transparent 31%),
-    radial-gradient(ellipse at 18% 18%, rgba(112, 123, 140, .075) 0%, transparent 38%),
-    radial-gradient(ellipse at 52% 110%, rgba(88, 96, 108, .12) 0%, transparent 45%),
-    linear-gradient(118deg, #080a10 0%, #0e111a 46%, #080a11 100%);
+.display-font { font-family: var(--font-orbitron), Arial, sans-serif; letter-spacing: -.055em; }
+.grid-lines {
+  background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
 }
-.hero-atmosphere::before,
-.hero-atmosphere::after {
-  content: "";
-  position: absolute;
-  width: min(70vw, 900px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  filter: blur(70px);
-  pointer-events: none;
-}
-.hero-atmosphere::before {
-  top: -48%; right: -22%;
-  background: radial-gradient(circle, rgba(194, 202, 214, .09), transparent 66%);
-  animation: atmosphere-drift 22s ease-in-out infinite alternate;
-}
-.hero-atmosphere::after {
-  bottom: -72%; left: -28%;
-  background: radial-gradient(circle, rgba(130, 142, 158, .09), transparent 68%);
-  animation: atmosphere-drift 28s ease-in-out infinite alternate-reverse;
-}
+.hero-glow { background: radial-gradient(ellipse at 65% 45%, rgba(167,173,180,.15), transparent 55%); }
 .hero-grain { opacity: .10; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.2'/%3E%3C/svg%3E"); }
 .outline-button { border: 1px solid rgba(255,255,255,.28); transition: border-color .2s, background .2s; }
 .outline-button:hover { border-color: var(--silver); background: rgba(255,255,255,.06); }
