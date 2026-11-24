@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope, Orbitron } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -7,9 +7,6 @@ const manrope = Manrope({
   variable: "--font-manrope",
   display: "swap",
 });
-
-
-const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anithium.in"),
@@ -46,7 +43,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${orbitron.variable}`}>
+      <body className={manrope.variable}>
         {children}
       </body>
     </html>
