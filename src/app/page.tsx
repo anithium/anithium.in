@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowDownRight, ArrowRight, ArrowUpRight, Menu } from "lucide-react";
+import { ArrowDownRight, ArrowRight, ArrowUpRight } from "lucide-react";
 
 const capabilities = [
   { number: "01", title: "Websites & Applications", description: "Digital experiences designed to move businesses and ideas forward." },
