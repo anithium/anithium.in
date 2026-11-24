@@ -1,51 +1,31 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope } from "next/font/google";
+import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  display: "swap",
-});
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", display: "swap" });
+const ibmPlexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-ibm-plex-mono", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anithium.in"),
-  title: {
-    default: "ANITHIUM — Technology & Innovation",
-    template: "%s | ANITHIUM",
-  },
-  description:
-    "ANITHIUM partners with individuals, startups and businesses to build websites, applications, custom software and AI-powered solutions.",
-  applicationName: "ANITHIUM",
+  title: { default: "ANITHIUM Labs — Software & AI Engineering", template: "%s | ANITHIUM Labs" },
+  description: "ANITHIUM Labs works with founders, teams and businesses on product engineering, custom software, applied AI systems and integrations.",
+  applicationName: "ANITHIUM Labs",
   openGraph: {
-    title: "ANITHIUM — Technology & Innovation",
-    description:
-      "Websites, applications, custom software and AI-powered solutions for individuals, startups and businesses.",
+    title: "ANITHIUM Labs — Software & AI Engineering",
+    description: "Product engineering, applied AI and software systems built around real operational problems.",
     url: "https://anithium.in",
-    siteName: "ANITHIUM",
+    siteName: "ANITHIUM Labs",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "ANITHIUM — Technology & Innovation",
-    description:
-      "An independent technology and innovation company driven by curiosity, guided by intent, and focused on what could be possible next.",
+    title: "ANITHIUM Labs — Software & AI Engineering",
+    description: "Product engineering, applied AI and software systems built around real operational problems.",
   },
 };
 
-export const viewport: Viewport = {
-  themeColor: "#e9e6de",
-  colorScheme: "dark",
-};
+export const viewport: Viewport = { themeColor: "#151817", colorScheme: "dark" };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="en">
-      <body className={manrope.variable}>
-        {children}
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en"><body className={`${spaceGrotesk.variable} ${ibmPlexMono.variable}`}>{children}</body></html>;
 }
