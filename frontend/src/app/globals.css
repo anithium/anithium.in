@@ -34,7 +34,7 @@ section[id] { scroll-margin-top: 24px; }
 @media (min-width: 640px) { .container { width: min(1200px, calc(100% - 64px)); } }
 @media (min-width: 1024px) { .container { width: min(1200px, calc(100% - 80px)); } }
 .eyebrow { color: var(--silver); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; }
-.display-font { font-family: var(--font-orbitron), Arial, sans-serif; letter-spacing: -.055em; }
+.display-font { font-family: var(--font-manrope), Arial, sans-serif; font-weight: 650; letter-spacing: -.065em; }
 .hero-atmosphere {
   background:
     radial-gradient(ellipse at 76% 48%, rgba(179, 188, 201, .105) 0%, transparent 31%),
