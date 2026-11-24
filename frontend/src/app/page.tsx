@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ArrowDownRight, ArrowUpRight, Bot, Braces, CircuitBoard, Database, ShieldCheck, Workflow } from "lucide-react";
 import MobileNav from "@/components/layout/mobile-nav";
 import Reveal from "@/components/motion/reveal";
@@ -55,8 +54,7 @@ export default function Home() {
               <div className="hero-audience"><span>PRODUCT TEAMS</span><span>FOUNDERS</span><span>OPERATIONS</span><span>BUSINESSES</span></div>
             </div>
             <Reveal className="system-visual" delay={.12}>
-              <div className="system-visual-top"><span>FIG. 01 / SYSTEMS THINKING</span><span>AN / 001</span></div>
-              <div className="system-map" aria-label="Illustrative software system architecture">
+                            <div className="system-map" aria-label="Illustrative software system architecture">
                 <div className="system-node node-input"><span>01</span><strong>Problem</strong><small>Context · Constraints</small></div>
                 <div className="system-connector connector-one"><i/></div>
                 <div className="system-node node-core"><span>02 / ENGINEERING</span><strong>ANITHIUM</strong><small>Design · Logic · Systems</small></div>
@@ -67,16 +65,14 @@ export default function Home() {
                   <div><span>03C</span><strong>Integration</strong></div>
                 </div>
               </div>
-              <div className="system-visual-bottom"><span>THINK → DESIGN → ENGINEER → OPERATE</span><span>NOT JUST A DEMO.</span></div>
             </Reveal>
-            <div className="hero-index"><span>INDEPENDENT BY DESIGN</span><span>SCROLL TO EXPLORE ↓</span></div>
           </div>
         </section>
 
         <section id="capabilities" className="capabilities-section">
           <div className="container">
             <Reveal className="section-intro">
-              <div><p className="section-kicker">01 / WHAT WE ENGINEER</p><h2>From the interface<br/>to the <em>underlying system.</em></h2></div>
+              <div><h2>From the interface<br/>to the <em>underlying system.</em></h2></div>
               <p>We work across the layers that make a digital product useful: the experience people touch, the logic behind it, the data it depends on and the automation that connects it all.</p>
             </Reveal>
             <div className="capability-list">
@@ -96,8 +92,7 @@ export default function Home() {
         <section className="market-section">
           <div className="container market-layout">
             <Reveal className="market-heading">
-              <p className="section-kicker">02 / THE ENGINEERING REALITY</p>
-              <h2>AI made the first draft cheaper.<br/><em>It did not make correctness optional.</em></h2>
+                            <h2>AI made the first draft cheaper.<br/><em>It did not make correctness optional.</em></h2>
               <p>We think the next advantage comes from engineering discipline: systems that can be evaluated, constrained, observed and improved—not simply generated.</p>
             </Reveal>
             <Reveal className="market-evidence">
@@ -115,7 +110,7 @@ export default function Home() {
         <section id="engineering" className="engineering-section">
           <div className="container">
             <Reveal className="section-intro engineering-intro">
-              <div><p className="section-kicker">03 / HOW WE THINK ABOUT ENGINEERING</p><h2>Useful software is<br/><em>earned, not generated.</em></h2></div>
+              <div><h2>Useful software is<br/><em>earned, not generated.</em></h2></div>
               <p>Modern tools can accelerate implementation. They cannot replace product judgment, system design or responsibility for what ships.</p>
             </Reveal>
             <div className="engineering-principles">
@@ -130,7 +125,6 @@ export default function Home() {
         <section id="process" className="process-section">
           <div className="container process-layout">
             <Reveal className="process-heading">
-              <p className="section-kicker">04 / FROM BRIEF TO BUILD</p>
               <h2>A clear path<br/>from <em>problem to production.</em></h2>
               <p>Every engagement starts with a conversation about what needs to change. We define the work together before committing to a build.</p>
               <a href="#contact" className="button-dark">Start a conversation <ArrowUpRight size={16}/></a>
@@ -145,7 +139,7 @@ export default function Home() {
 
         <section id="about" className="about-section">
           <div className="container about-layout">
-            <Reveal><p className="section-kicker">05 / ABOUT THE LAB</p><div className="about-mark"><Image src="/images/anithium-symbol-white.svg" alt="" width={76} height={76}/></div></Reveal>
+            <Reveal><p className="section-kicker">About ANITHIUM Labs</p></Reveal>
             <Reveal className="about-copy">
               <h2>ANITHIUM Labs is an independent technology practice built around <em>curiosity and engineering.</em></h2>
               <p>We work with founders, individuals and businesses to turn requirements into considered digital systems. Our work spans product engineering, custom software, integrations and applied AI.</p>
@@ -157,7 +151,6 @@ export default function Home() {
         <section id="contact" className="contact-section">
           <div className="container contact-layout">
             <Reveal className="contact-copy">
-              <p className="section-kicker">06 / START WITH THE PROBLEM</p>
               <h2>What are you<br/>trying to <em>make work?</em></h2>
               <p>Tell us what you are building, what is getting in the way, or which process needs to work better. A concise brief is enough to start.</p>
               <a className="contact-email" href="mailto:anithium.in@gmail.com?subject=Project%20discussion%20-%20ANITHIUM%20Labs">anithium.in@gmail.com <ArrowUpRight size={18}/></a>
