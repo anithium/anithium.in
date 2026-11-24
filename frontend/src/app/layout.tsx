@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     template: "%s | ANITHIUM",
   },
   description:
-    "ANITHIUM is an independent technology and innovation company shaped by curiosity, independent thinking, and the possibilities of technology.",
+    "ANITHIUM partners with individuals, startups and businesses to build websites, applications, custom software and AI-powered solutions.",
   applicationName: "ANITHIUM",
   openGraph: {
     title: "ANITHIUM — Technology & Innovation",
     description:
-      "An independent technology and innovation company driven by curiosity, guided by intent, and focused on what could be possible next.",
+      "Websites, applications, custom software and AI-powered solutions for individuals, startups and businesses.",
     url: "https://anithium.in",
     siteName: "ANITHIUM",
     type: "website",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#101010",
+  themeColor: "#e9e6de",
   colorScheme: "dark",
 };
 
