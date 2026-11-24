@@ -25,7 +25,7 @@ export default function Home() {
         <a href="#contact" className="outline-button hidden items-center gap-3 px-5 py-3 text-[10px] uppercase tracking-[.16em] md:flex">
           Start a conversation <ArrowUpRight size={14} />
         </a>
-        <button aria-label="Open navigation" className="text-white md:hidden"><Menu size={22} /></button>
+        
       </header>
 
       <section className="relative flex min-h-[690px] items-center border-b border-white/10">
@@ -62,7 +62,7 @@ export default function Home() {
               priority
               className="relative z-10 h-[62%] w-[62%] object-contain drop-shadow-[0_0_55px_rgba(220,225,230,.16)]"
             />
-            <span className="absolute bottom-[7%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] tracking-[.35em] text-white/35">ENGINEER THE POSSIBLE</span>
+            <span className="absolute bottom-[7%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] tracking-[.35em] text-white/35">TECHNOLOGY &amp; INNOVATION</span>
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 items-center gap-3 text-[9px] uppercase tracking-[.24em] text-white/35 md:flex">
@@ -124,7 +124,7 @@ export default function Home() {
         <div className="container py-24 text-center md:py-32">
           <p className="eyebrow mb-6">Have an idea in mind?</p>
           <h2 className="display-font mx-auto max-w-[800px] text-5xl leading-tight sm:text-7xl">Let&apos;s make something <span className="text-white/40">matter.</span></h2>
-          <a href="mailto:hello@anithium.com" className="solid-button mt-10 inline-flex items-center gap-5 px-7 py-4 text-[11px] font-semibold uppercase tracking-[.15em]">Start a conversation <ArrowRight size={16} /></a>
+          <a href="#about" className="solid-button mt-10 inline-flex items-center gap-5 px-7 py-4 text-[11px] font-semibold uppercase tracking-[.15em]">Discover ANITHIUM <ArrowRight size={16} /></a>
         </div>
       </section>
 
