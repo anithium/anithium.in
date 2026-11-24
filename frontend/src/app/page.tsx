@@ -10,8 +10,9 @@ const principles = [
 
 export default function Home() {
   return (
-    <a href="#main-content" className="skip-link">Skip to content</a>
-    <main id="main-content" className="site-shell">
+    <>
+      <a href="#main-content" className="skip-link">Skip to content</a>
+      <main id="main-content" className="site-shell">
       <header className="container relative z-30 flex h-16 items-center justify-between border-b border-white/10 sm:h-20">
         <a href="#" aria-label="ANITHIUM home" className="flex min-w-0 items-center gap-2.5 sm:gap-3">
           <Image src="/images/anithium-symbol-white.svg" alt="" width={30} height={30} priority />
@@ -126,6 +127,7 @@ export default function Home() {
           <a href="#" className="transition hover:text-white">Back to top ↑</a>
         </div>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }
