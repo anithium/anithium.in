@@ -86,7 +86,7 @@ export default function AmbientWorld() {
 
         context.beginPath();
         context.arc(px, py, particle.radius * (1 + influence * 1.8), 0, Math.PI * 2);
-        context.fillStyle = `rgba(210,224,255,${particle.alpha * pulse + influence * 0.55})`;
+        context.fillStyle = `rgba(238,240,244,${Math.min(1, particle.alpha * pulse + influence * 0.55)})`;
         context.fill();
 
         if (index % 3 === 0) {
