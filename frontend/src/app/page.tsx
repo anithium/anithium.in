@@ -139,7 +139,6 @@ export default function Home() {
 
         <section id="about" className="about-section">
           <div className="container about-layout">
-            <Reveal><p className="section-kicker">About ANITHIUM Labs</p></Reveal>
             <Reveal className="about-copy">
               <h2>ANITHIUM Labs is an independent technology practice built around <em>curiosity and engineering.</em></h2>
               <p>We work with founders, individuals and businesses to turn requirements into considered digital systems. Our work spans product engineering, custom software, integrations and applied AI.</p>
