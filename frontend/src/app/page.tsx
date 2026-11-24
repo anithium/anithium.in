@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowDownRight, ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowDownRight, ArrowRight, ArrowUpRight, Menu, X } from "lucide-react";
 
 const capabilities = [
   { number: "01", title: "Websites & Applications", description: "Digital experiences designed to move businesses and ideas forward." },
@@ -25,9 +25,9 @@ export default function Home() {
         <a href="#contact" className="outline-button hidden items-center gap-3 px-5 py-3 text-[10px] uppercase tracking-[.16em] md:flex">
           Start a conversation <ArrowUpRight size={14} />
         </a>
-        <details className="relative md:hidden">
+        <details className="mobile-menu relative md:hidden">
           <summary aria-label="Open navigation menu" className="flex h-11 w-11 cursor-pointer list-none items-center justify-center border border-white/20 text-white [&::-webkit-details-marker]:hidden">
-            <span className="text-xl leading-none">☰</span>
+            <Menu className="mobile-menu-icon" size={20} aria-hidden="true" /><X className="mobile-menu-close" size={20} aria-hidden="true" />
           </summary>
           <nav aria-label="Mobile navigation" className="absolute right-0 top-14 flex w-56 flex-col border border-white/15 bg-[#171717] p-2 shadow-2xl">
             <a className="px-4 py-3 text-xs uppercase tracking-[.16em] text-white/75 hover:bg-white/5 hover:text-white" href="#about">About</a>
