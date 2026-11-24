@@ -36,7 +36,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline: 2px solid 
 .desktop-nav a,.header-cta { font-family:var(--font-ibm-plex-mono),monospace; font-size:10px; letter-spacing:.04em; color:var(--chalk-muted); transition:color .2s; }
 .desktop-nav a:hover,.header-cta:hover { color:var(--signal); }
 .header-cta { display:inline-flex; align-items:center; gap:10px; padding:13px 0; border-bottom:1px solid var(--signal); color:var(--chalk); }
-.mobile-menu button { color:var(--chalk); border:1px solid var(--line); }
+.mobile-menu-trigger { color:var(--chalk); border:1px solid var(--line); background:transparent; }\n.mobile-menu-trigger:hover { color:var(--signal); border-color:var(--signal); }\n.mobile-menu-panel { border:1px solid var(--line); background:var(--carbon-raised); box-shadow:0 18px 45px rgba(0,0,0,.35); }
 .menu-link { display:block; padding:13px 14px; color:var(--chalk); font-family:var(--font-ibm-plex-mono),monospace; font-size:11px; }
 .menu-link:hover { color:var(--signal); background:var(--carbon-soft); }
 
