@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "ANITHIUM — Technology & Innovation",
     description:
-      "We turn ambitious ideas into meaningful digital experiences, intelligent systems, and ventures built for the future.",
+      "An independent technology and innovation company driven by curiosity, guided by intent, and focused on what could be possible next.",
   },
 };
 
