@@ -41,8 +41,9 @@ export default function AmbientWorld() {
     };
 
     const onPointer = (event: PointerEvent) => {
-      pointer.x = event.clientX;
-      pointer.y = event.clientY + window.scrollY;
+      pointer.targetX = event.clientX;
+      pointer.targetY = event.clientY + window.scrollY;
+      pointer.active = true;
     };
     const draw = () => {
       context.clearRect(0, 0, width, height);
