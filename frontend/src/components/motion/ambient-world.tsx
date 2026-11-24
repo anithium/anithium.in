@@ -28,15 +28,15 @@ export default function AmbientWorld() {
       canvas.style.width = "100%";
       canvas.style.height = `${height}px`;
       context.setTransform(ratio, 0, 0, ratio, 0, 0);
-      const count = Math.min(190, Math.max(70, Math.floor((width * height) / 11500)));
+      const count = Math.min(420, Math.max(160, Math.floor((width * height) / 6800)));
       particles = Array.from({ length: count }, (_, index) => ({
         x: Math.random() * width,
         y: Math.random() * height,
         vx: (Math.random() - 0.5) * 0.12,
         vy: (Math.random() - 0.5) * 0.12,
-        radius: Math.random() * 1.35 + 0.25,
+        radius: Math.random() < 0.09 ? Math.random() * 1.5 + 1.0 : Math.random() * 1.0 + 0.2,
         phase: Math.random() * Math.PI * 2,
-        alpha: 0.18 + Math.random() * 0.55,
+        alpha: 0.22 + Math.random() * 0.68,
       }));
     };
 
@@ -51,17 +51,17 @@ export default function AmbientWorld() {
       pointer.y += (pointer.targetY - pointer.y) * 0.14;
       const scroll = window.scrollY;
       const glow = context.createRadialGradient(width * 0.72, scroll + height * 0.2, 0, width * 0.72, scroll + height * 0.2, Math.max(width, 600) * 0.65);
-      glow.addColorStop(0, "rgba(135,155,190,0.075)");
-      glow.addColorStop(0.48, "rgba(80,105,145,0.025)");
+      glow.addColorStop(0, "rgba(220,224,230,0.10)");
+      glow.addColorStop(0.48, "rgba(155,162,172,0.035)");
       glow.addColorStop(1, "rgba(8,10,16,0)");
       context.fillStyle = glow;
       context.fillRect(0, 0, width, height);
 
       if (pointer.active) {
         const cursorGlow = context.createRadialGradient(pointer.x, pointer.y, 0, pointer.x, pointer.y, 250);
-        cursorGlow.addColorStop(0, "rgba(160,190,245,0.12)");
-        cursorGlow.addColorStop(0.4, "rgba(112,139,205,0.045)");
-        cursorGlow.addColorStop(1, "rgba(90,110,160,0)");
+        cursorGlow.addColorStop(0, "rgba(235,238,242,0.14)");
+        cursorGlow.addColorStop(0.4, "rgba(170,178,190,0.055)");
+        cursorGlow.addColorStop(1, "rgba(120,128,140,0)");
         context.fillStyle = cursorGlow;
         context.fillRect(pointer.x - 250, pointer.y - 250, 500, 500);
       }
