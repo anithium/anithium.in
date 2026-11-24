@@ -13,7 +13,7 @@ export default function AmbientWorld() {
     if (!canvas || !context) return;
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const pointer = { x: -1000, y: -1000 };
+    const pointer = { x: -1000, y: -1000, targetX: -1000, targetY: -1000, active: false };
     let width = 0;
     let height = 0;
     let animation = 0;
@@ -68,13 +68,13 @@ export default function AmbientWorld() {
         const dx = particle.x - pointer.x;
         const dy = particle.y - pointer.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        const influence = distance < 170 ? (1 - distance / 170) : 0;
+        const influence = distance < 190 ? (1 - distance / 190) : 0;
         const px = particle.x + (distance ? (dx / distance) * influence * 10 : 0);
         const py = particle.y + (distance ? (dy / distance) * influence * 10 : 0);
 
         context.beginPath();
         context.arc(px, py, particle.radius * (1 + influence * 1.8), 0, Math.PI * 2);
-        context.fillStyle = `rgba(210,224,245,${particle.alpha * pulse + influence * 0.35})`;
+        context.fillStyle = `rgba(210,224,255,${particle.alpha * pulse + influence * 0.55})`;
         context.fill();
 
         if (index % 3 === 0) {
