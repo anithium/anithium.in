@@ -16,7 +16,6 @@ export default function AmbientWorld() {
     const pointer = { x: -1000, y: -1000 };
     let width = 0;
     let height = 0;
-    let frame = 0;
     let animation = 0;
     let particles: Particle[] = [];
 
@@ -99,8 +98,9 @@ export default function AmbientWorld() {
     };
 
     resize();
-    draw();
-    if (!reducedMotion) {
+    if (reducedMotion) {
+      draw();
+    } else {
       animation = window.requestAnimationFrame(draw);
       window.addEventListener("pointermove", onPointer, { passive: true });
       window.addEventListener("resize", resize);
