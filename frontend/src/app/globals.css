@@ -29,7 +29,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 section[id] { scroll-margin-top: 24px; }
 ::selection { background: var(--silver); color: var(--obsidian); }
 
-.site-shell { overflow: hidden; min-height: 100vh; }
+.site-shell { position: relative; isolation: isolate; overflow: hidden; min-height: 100vh; }
+.ambient-world { position: absolute; inset: 0 auto auto 0; width: 100%; opacity: .9; z-index: -1; }
+.site-header { border-bottom-color: rgba(220,230,245,.12); backdrop-filter: blur(18px); }
+.site-header::after { content: ""; position: absolute; inset: auto 0 -1px; height: 1px; background: linear-gradient(90deg, transparent, rgba(210,225,245,.22), transparent); }
 .container { width: min(1200px, calc(100% - 40px)); margin-inline: auto; }
 @media (min-width: 640px) { .container { width: min(1200px, calc(100% - 64px)); } }
 @media (min-width: 1024px) { .container { width: min(1200px, calc(100% - 80px)); } }
@@ -40,7 +43,7 @@ section[id] { scroll-margin-top: 24px; }
     radial-gradient(ellipse at 76% 48%, rgba(179, 188, 201, .105) 0%, transparent 31%),
     radial-gradient(ellipse at 18% 18%, rgba(112, 123, 140, .075) 0%, transparent 38%),
     radial-gradient(ellipse at 52% 110%, rgba(88, 96, 108, .12) 0%, transparent 45%),
-    linear-gradient(118deg, #0b0c0e 0%, #111316 46%, #090a0c 100%);
+    linear-gradient(118deg, #080a10 0%, #0e111a 46%, #080a11 100%);
 }
 .hero-atmosphere::before,
 .hero-atmosphere::after {
@@ -79,6 +82,10 @@ section[id] { scroll-margin-top: 24px; }
 .skip-link:focus { transform: translateY(0); }
 .hero-emblem { position: relative; isolation: isolate; filter: drop-shadow(0 30px 70px rgba(0,0,0,.32)); }
 .emblem-aura { position: absolute; inset: 13%; border-radius: 50%; background: radial-gradient(circle, rgba(220,225,232,.18), rgba(140,150,160,.055) 42%, transparent 70%); filter: blur(18px); animation: aura-breathe 7s ease-in-out infinite; }
+.hero-aurora { overflow: hidden; opacity: .8; }
+.hero-aurora::before, .hero-aurora::after { content: ""; position: absolute; width: 75vw; height: 28vw; min-height: 240px; border-radius: 50%; filter: blur(75px); mix-blend-mode: screen; }
+.hero-aurora::before { top: 12%; right: -18%; background: linear-gradient(100deg, transparent, rgba(95,125,180,.11), rgba(160,180,215,.055), transparent); transform: rotate(-28deg); animation: aurora-wave 24s ease-in-out infinite alternate; }
+.hero-aurora::after { bottom: -8%; left: -30%; background: linear-gradient(100deg, transparent, rgba(80,115,165,.10), rgba(160,180,215,.045), transparent); transform: rotate(22deg); animation: aurora-wave 30s ease-in-out infinite alternate-reverse; }
 .hero-light {
   background: radial-gradient(ellipse at 76% 48%, rgba(225, 231, 240, .075), transparent 34%);
   mix-blend-mode: screen;
@@ -114,6 +121,8 @@ section[id] { scroll-margin-top: 24px; }
 .emblem-orbit-one { border-color: rgba(220,225,232,.12); }
 .emblem-orbit-two { border-color: rgba(220,225,232,.075); }
 .emblem-orbit-three { border-style: solid; border-color: rgba(220,225,232,.055); }
+@keyframes aurora-wave { from { translate: -4% -2%; scale: .9; } to { translate: 7% 8%; scale: 1.15; } }
+@keyframes halo-spin { from { rotate: 0deg; } to { rotate: 360deg; } }
 @keyframes atmosphere-drift { from { transform: translate3d(-2%, 0, 0) scale(.94); } to { transform: translate3d(3%, 5%, 0) scale(1.08); } }
 
 @keyframes emblem-float { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-12px) rotate(2deg); } }
@@ -123,6 +132,8 @@ section[id] { scroll-margin-top: 24px; }
 
 @media (max-width: 639px) {
   .hero-section { min-height: auto; }
+  .hero-aurora::before, .hero-aurora::after { width: 120vw; height: 65vw; filter: blur(55px); }
+  .emblem-rune, .emblem-coordinate { font-size: 6px; letter-spacing: .16em; }
   .hero-emblem { max-width: min(78vw, 360px); }
   .emblem-caption { font-size: 7px; letter-spacing: .2em; }
 }
@@ -134,4 +145,6 @@ section[id] { scroll-margin-top: 24px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .motion-ready [data-reveal] { opacity: 1; transform: none; }
+  .hero-aurora::before, .hero-aurora::after { animation: none; }
+  .emblem-halo-one, .emblem-halo-two { animation: none; }
 }
