@@ -31,8 +31,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 section[id] { scroll-margin-top: 24px; }
 ::selection { background: var(--silver); color: var(--obsidian); }
 
-.site-shell { position: relative; isolation: isolate; overflow: hidden; min-height: 100vh; background: linear-gradient(180deg, rgba(7,9,16,.18), rgba(7,9,16,.42)); }
-.ambient-world { position: absolute; top: 0; left: 0; width: 100%; opacity: .95; z-index: -1; display: block; pointer-events: none; }
+.site-shell { position: relative; isolation: isolate; overflow: hidden; min-height: 100vh; background: linear-gradient(180deg, rgba(7,9,16,.10), rgba(7,9,16,.28)); }
+.site-shell > header, .site-shell > section, .site-shell > footer { position: relative; z-index: 1; }
+.ambient-world { position: absolute; top: 0; left: 0; width: 100%; opacity: .98; z-index: 0; display: block; pointer-events: none; }
 .site-header { border-bottom-color: rgba(180,198,230,.13); backdrop-filter: blur(18px); }
 .site-header::after { content: ""; position: absolute; inset: auto 0 -1px; height: 1px; background: linear-gradient(90deg, transparent, rgba(210,225,245,.22), transparent); }
 .container { width: min(1200px, calc(100% - 40px)); margin-inline: auto; }
