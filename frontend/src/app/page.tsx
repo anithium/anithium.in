@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { ArrowDownRight, ArrowRight, ArrowUpRight, Bot, Code2, Globe2, Layers3 } from "lucide-react";
 import MobileNav from "@/components/layout/mobile-nav";
-import ScrollEffects from "@/components/motion/scroll-effects";
 import Reveal from "@/components/motion/reveal";
 
 const services = [
@@ -23,7 +22,6 @@ export default function Home() {
     <>
       <a href="#main-content" className="skip-link">Skip to content</a>
       <main id="main-content" className="site-shell">
-        <ScrollEffects />
         <header className="site-header">
           <div className="container header-inner">
             <a href="#" aria-label="ANITHIUM home" className="brand-lockup">
