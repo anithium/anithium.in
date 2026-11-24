@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+import MobileNav from "@/components/layout/mobile-nav";
 
 const principles = [
   { number: "01", title: "Think independently", text: "Question assumptions. Look beyond the obvious. Make room for ideas that challenge convention." },
@@ -9,7 +10,8 @@ const principles = [
 
 export default function Home() {
   return (
-    <main className="site-shell">
+    <a href="#main-content" className="skip-link">Skip to content</a>
+    <main id="main-content" className="site-shell">
       <header className="container relative z-30 flex h-16 items-center justify-between border-b border-white/10 sm:h-20">
         <a href="#" aria-label="ANITHIUM home" className="flex min-w-0 items-center gap-2.5 sm:gap-3">
           <Image src="/images/anithium-symbol-white.svg" alt="" width={30} height={30} priority />
@@ -24,18 +26,7 @@ export default function Home() {
         <a href="#contact" className="outline-button hidden items-center gap-3 px-5 py-3 text-[10px] uppercase tracking-[.16em] md:flex">
           Get in touch <ArrowUpRight size={14} />
         </a>
-        <details className="mobile-menu relative md:hidden">
-          <summary aria-label="Toggle navigation menu" className="flex h-11 w-11 cursor-pointer list-none items-center justify-center border border-white/20 text-white [&::-webkit-details-marker]:hidden">
-            <Menu className="mobile-menu-icon" size={20} aria-hidden="true" />
-            <X className="mobile-menu-close" size={20} aria-hidden="true" />
-          </summary>
-          <nav aria-label="Mobile navigation" className="absolute right-0 top-14 flex w-56 flex-col border border-white/15 bg-[#171717] p-2 shadow-2xl">
-            <a className="menu-link" href="#about">About</a>
-            <a className="menu-link" href="#perspective">Perspective</a>
-            <a className="menu-link" href="#principles">Principles</a>
-            <a className="menu-link" href="#contact">Contact</a>
-          </nav>
-        </details>
+        <MobileNav />
       </header>
 
       <section className="hero-section relative flex min-h-[690px] items-center overflow-hidden border-b border-white/10 py-16 sm:min-h-[760px] lg:min-h-[calc(100svh-80px)] lg:py-20">
@@ -61,7 +52,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-emblem mx-auto flex aspect-square w-full max-w-[min(82vw,470px)] items-center justify-center" aria-label="ANITHIUM symbol visual">
+          <div className="hero-emblem mx-auto flex aspect-square w-full max-w-[min(82vw,470px)] items-center justify-center" role="img" aria-label="ANITHIUM angular symbol surrounded by subtle orbital rings">
             <div className="emblem-aura" />
             <div className="emblem-orbit emblem-orbit-one"><span /></div>
             <div className="emblem-orbit emblem-orbit-two"><span /></div>
