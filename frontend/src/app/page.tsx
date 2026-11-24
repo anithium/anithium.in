@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import MobileNav from "@/components/layout/mobile-nav";
 import ScrollEffects from "@/components/motion/scroll-effects";
+import AmbientWorld from "@/components/motion/ambient-world";
 
 const principles = [
   { number: "01", title: "Think independently", text: "Question assumptions. Look beyond the obvious. Make room for ideas that challenge convention." },
@@ -15,6 +16,7 @@ export default function Home() {
       <a href="#main-content" className="skip-link">Skip to content</a>
       <main id="main-content" className="site-shell">
       <ScrollEffects />
+      <AmbientWorld />
       <header className="container relative z-30 flex h-16 items-center justify-between border-b border-white/10 sm:h-20 site-header">
         <a href="#" aria-label="ANITHIUM home" className="flex min-w-0 items-center gap-2.5 sm:gap-3">
           <Image src="/images/anithium-symbol-white.svg" alt="" width={30} height={30} priority />
@@ -33,7 +35,7 @@ export default function Home() {
       </header>
 
       <section className="hero-section relative flex min-h-[690px] items-center overflow-hidden border-b border-white/10 py-16 sm:min-h-[760px] lg:min-h-[calc(100svh-80px)] lg:py-20">
-        <div className="grid-lines pointer-events-none absolute inset-0" />
+        
         <div className="hero-glow pointer-events-none absolute inset-0" />
         <div className="hero-grain pointer-events-none absolute inset-0" />
         <div className="container relative z-10 grid items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
