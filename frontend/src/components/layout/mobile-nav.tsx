@@ -23,11 +23,11 @@ export default function MobileNav() {
         aria-expanded={isOpen}
         aria-controls="mobile-navigation"
         onClick={() => setIsOpen((open) => !open)}
-        className="flex h-11 w-11 cursor-pointer items-center justify-center border border-white/20 text-white transition hover:border-white/50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a7adb4]"
+        className="flex h-11 w-11 cursor-pointer items-center justify-center border border-[#1d201d]/25 text-[#1d201d] transition hover:border-[#b64d32] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b64d32]"
       >
         {isOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
       </button>
-      <nav id="mobile-navigation" aria-label="Mobile navigation" hidden={!isOpen} className={`absolute right-0 top-14 w-56 flex-col border border-white/15 bg-[#171717] p-2 shadow-2xl ${isOpen ? "flex" : "hidden"}`}>
+      <nav id="mobile-navigation" aria-label="Mobile navigation" hidden={!isOpen} className={`absolute right-0 top-14 w-56 flex-col border border-[#1d201d]/20 bg-[#e9e6de] p-2 shadow-xl ${isOpen ? "flex" : "hidden"}`}>
           {links.map((link) => (
             <a key={link.href} className="menu-link" href={link.href} onClick={() => setIsOpen(false)}>
               {link.label}
