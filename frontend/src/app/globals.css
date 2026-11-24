@@ -30,7 +30,7 @@ section[id] { scroll-margin-top: 24px; }
 ::selection { background: var(--silver); color: var(--obsidian); }
 
 .site-shell { position: relative; isolation: isolate; overflow: hidden; min-height: 100vh; }
-.ambient-world { position: absolute; inset: 0 auto auto 0; width: 100%; opacity: .9; z-index: -1; }
+.ambient-world { position: absolute; top: 0; left: 0; width: 100%; opacity: .9; z-index: -1; display: block; }
 .site-header { border-bottom-color: rgba(220,230,245,.12); backdrop-filter: blur(18px); }
 .site-header::after { content: ""; position: absolute; inset: auto 0 -1px; height: 1px; background: linear-gradient(90deg, transparent, rgba(210,225,245,.22), transparent); }
 .container { width: min(1200px, calc(100% - 40px)); margin-inline: auto; }
