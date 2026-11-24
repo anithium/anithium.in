@@ -62,6 +62,23 @@ section[id] { scroll-margin-top: 24px; }
   background: radial-gradient(circle, rgba(130, 142, 158, .09), transparent 68%);
   animation: atmosphere-drift 28s ease-in-out infinite alternate-reverse;
 }
+.hero-grain { opacity: .10; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.2'/%3E%3C/svg%3E"); }
+.outline-button { border: 1px solid rgba(255,255,255,.28); transition: border-color .2s, background .2s; }
+.outline-button:hover { border-color: var(--silver); background: rgba(255,255,255,.06); }
+.solid-button { background: var(--white); color: var(--obsidian); transition: transform .2s, background .2s; }
+.solid-button:hover { transform: translateY(-2px); background: var(--light-grey); }
+.section-rule { border-top: 1px solid rgba(255,255,255,.075); position: relative; }
+.section-rule::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .6; background: radial-gradient(ellipse at 50% 0%, rgba(180,190,205,.035), transparent 58%); }
+#about { position: relative; }
+#about::after { content: ""; position: absolute; z-index: -1; width: 34rem; height: 34rem; right: -18rem; top: 5%; border-radius: 50%; background: rgba(150,160,175,.035); filter: blur(90px); }
+#contact { position: relative; overflow: hidden; }
+#contact::before { content: ""; position: absolute; width: 42rem; height: 22rem; left: 50%; top: 15%; transform: translateX(-50%); background: radial-gradient(ellipse, rgba(190,200,215,.075), transparent 68%); filter: blur(32px); pointer-events: none; }
+.menu-link { padding: 12px 16px; color: rgba(255,255,255,.75); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
+.menu-link:hover, .menu-link:focus-visible { color: white; background: rgba(255,255,255,.05); }
+.skip-link { position: fixed; z-index: 100; top: 12px; left: 12px; padding: 12px 16px; background: var(--white); color: var(--obsidian); font-size: 12px; transform: translateY(-160%); transition: transform .2s ease; }
+.skip-link:focus { transform: translateY(0); }
+.hero-emblem { position: relative; isolation: isolate; filter: drop-shadow(0 30px 70px rgba(0,0,0,.32)); }
+.emblem-aura { position: absolute; inset: 13%; border-radius: 50%; background: radial-gradient(circle, rgba(220,225,232,.18), rgba(140,150,160,.055) 42%, transparent 70%); filter: blur(18px); animation: aura-breathe 7s ease-in-out infinite; }
 .hero-light {
   background: radial-gradient(ellipse at 76% 48%, rgba(225, 231, 240, .075), transparent 34%);
   mix-blend-mode: screen;
