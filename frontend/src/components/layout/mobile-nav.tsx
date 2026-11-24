@@ -27,7 +27,7 @@ export default function MobileNav() {
       >
         {isOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
       </button>
-      <nav id="mobile-navigation" aria-label="Mobile navigation" hidden={!isOpen} className="absolute right-0 top-14 flex w-56 flex-col border border-white/15 bg-[#171717] p-2 shadow-2xl">
+      <nav id="mobile-navigation" aria-label="Mobile navigation" hidden={!isOpen} className={`absolute right-0 top-14 w-56 flex-col border border-white/15 bg-[#171717] p-2 shadow-2xl ${isOpen ? "flex" : "hidden"}`}>
           {links.map((link) => (
             <a key={link.href} className="menu-link" href={link.href} onClick={() => setIsOpen(false)}>
               {link.label}
