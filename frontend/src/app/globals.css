@@ -27,8 +27,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   outline-offset: 4px;
 }
 section[id] { scroll-margin-top: 24px; }
-summary { list-style: none; }
-summary::-webkit-details-marker { display: none; }
 ::selection { background: var(--silver); color: var(--obsidian); }
 
 .site-shell { overflow: hidden; min-height: 100vh; }
@@ -50,11 +48,9 @@ summary::-webkit-details-marker { display: none; }
 .solid-button:hover { transform: translateY(-2px); background: var(--light-grey); }
 .section-rule { border-top: 1px solid rgba(255,255,255,.12); }
 .menu-link { padding: 12px 16px; color: rgba(255,255,255,.75); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
-.menu-link:hover { color: white; background: rgba(255,255,255,.05); }
-.mobile-menu-icon { display: block; }
-.mobile-menu-close { display: none; }
-.mobile-menu[open] .mobile-menu-icon { display: none; }
-.mobile-menu[open] .mobile-menu-close { display: block; }
+.menu-link:hover, .menu-link:focus-visible { color: white; background: rgba(255,255,255,.05); }
+.skip-link { position: fixed; z-index: 100; top: 12px; left: 12px; padding: 12px 16px; background: var(--white); color: var(--obsidian); font-size: 12px; transform: translateY(-160%); transition: transform .2s ease; }
+.skip-link:focus { transform: translateY(0); }
 
 .hero-emblem { position: relative; isolation: isolate; }
 .emblem-aura {
@@ -87,6 +83,7 @@ summary::-webkit-details-marker { display: none; }
 
 @media (max-width: 639px) {
   .hero-section { min-height: auto; }
+  .hero-emblem { max-width: min(78vw, 360px); }
   .emblem-caption { font-size: 7px; letter-spacing: .2em; }
 }
 @media (max-width: 360px) {
