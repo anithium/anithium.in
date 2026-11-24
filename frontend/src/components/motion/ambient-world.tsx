@@ -47,6 +47,8 @@ export default function AmbientWorld() {
     };
     const draw = () => {
       context.clearRect(0, 0, width, height);
+      pointer.x += (pointer.targetX - pointer.x) * 0.14;
+      pointer.y += (pointer.targetY - pointer.y) * 0.14;
       const scroll = window.scrollY;
       const glow = context.createRadialGradient(width * 0.72, scroll + height * 0.2, 0, width * 0.72, scroll + height * 0.2, Math.max(width, 600) * 0.65);
       glow.addColorStop(0, "rgba(135,155,190,0.075)");
@@ -54,6 +56,15 @@ export default function AmbientWorld() {
       glow.addColorStop(1, "rgba(8,10,16,0)");
       context.fillStyle = glow;
       context.fillRect(0, 0, width, height);
+
+      if (pointer.active) {
+        const cursorGlow = context.createRadialGradient(pointer.x, pointer.y, 0, pointer.x, pointer.y, 250);
+        cursorGlow.addColorStop(0, "rgba(160,190,245,0.12)");
+        cursorGlow.addColorStop(0.4, "rgba(112,139,205,0.045)");
+        cursorGlow.addColorStop(1, "rgba(90,110,160,0)");
+        context.fillStyle = cursorGlow;
+        context.fillRect(pointer.x - 250, pointer.y - 250, 500, 500);
+      }
 
       particles.forEach((particle, index) => {
         if (!reducedMotion) {
